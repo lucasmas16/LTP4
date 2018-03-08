@@ -10,18 +10,18 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var Pessoa_1 = require("./Pessoa");
-var Empregado = /** @class */ (function (_super) {
-    __extends(Empregado, _super);
-    function Empregado(nome, idade, salario) {
-        var _this = _super.call(this, nome, idade) || this;
-        _this.salario = salario;
+var Empregado_1 = require("./Empregado");
+var Diretoria = /** @class */ (function (_super) {
+    __extends(Diretoria, _super);
+    function Diretoria(nome, idade, salario, setor) {
+        var _this = _super.call(this, nome, idade, salario) || this;
+        _this.setor = setor;
         return _this;
     }
-    ;
-    Empregado.prototype.mostraInformacao = function () {
-        console.log("Nome: " + this.Nome + "\nIdade: " + this.Idade + "\nSalario: R$" + this.salario);
+    Diretoria.prototype.mostraInformacao = function () {
+        _super.prototype.mostraInformacao.call(this);
+        console.log("\nSetor: " + this.setor);
     };
-    return Empregado;
-}(Pessoa_1.Pessoa));
-exports.default = Empregado;
+    return Diretoria;
+}(Empregado_1.default));
+exports.default = Diretoria;

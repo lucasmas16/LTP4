@@ -19,4 +19,4 @@ class NotaAluno{
     }
     
 }
-NotaAluno.main();
+NotaAluno.main();ddd
